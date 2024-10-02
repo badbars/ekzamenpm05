@@ -1,0 +1,33 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Форма записи на прием</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Запись на прием</h1>
+        <form id="appointment-form">
+            <label for="fullName">ФИО:</label>
+            <input type="text" id="fullName" required pattern="[А-Яа-яЁё\s]+" title="ФИО должно содержать только кириллицу и пробелы">
+
+            <label for="birthDate">Дата рождения:</label>
+            <input type="date" id="birthDate" required>
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" required pattern="\d{11}" title="Телефон должен содержать 11 цифр">
+
+            <label for="appointmentDate">Дата приема:</label>
+            <input type="date" id="appointmentDate" required>
+
+            <label for="appointmentTime">Время приема:</label>
+            <input type="time" id="appointmentTime" required>
+
+            <button type="submit">Записаться</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
